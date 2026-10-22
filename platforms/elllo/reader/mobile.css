@@ -1,0 +1,50 @@
+.mobile-level,.mobile-picker,.theme-toggle,.mobile-head{display:none}
+
+@media(max-width:800px){
+  body{--m-bg:#f5f1e9;--m-panel:#fffdf8;--m-control:#eee8df;--m-line:#d6d0c7;--m-text:#171a18;--m-muted:#6c716d;--m-accent:#55781a;--m-active:#efffd1;overflow:hidden;background:var(--m-bg)}
+  body.mobile-dark{--m-bg:#11191d;--m-panel:#131a1f;--m-control:#172027;--m-line:#394348;--m-text:#f7f5ee;--m-muted:#aeb6b2;--m-accent:#bff25e;--m-active:#26341f}
+  .mobile-head{height:58px;padding:7px 12px;gap:9px;display:flex;align-items:center;background:var(--m-panel);border-bottom:1px solid var(--m-line)}
+  .mobile-level-switch{flex:0 0 auto;margin-top:0}
+  .level-btn{padding:8px 12px;border:1px solid var(--m-line);border-radius:999px;background:var(--m-control);color:var(--m-text);font:inherit;font-size:13px;font-weight:800;cursor:pointer}
+  .level-btn.active{background:var(--m-accent);border-color:var(--m-accent);color:var(--m-bg)}
+  .mobile-level{display:block;min-width:0;flex:1;padding:9px 30px 9px 12px;border:1px solid var(--m-line);border-radius:999px;background:var(--m-control);color:var(--m-text);font:inherit;font-size:14px;font-weight:800}
+  .theme-toggle{width:34px;height:34px;flex:0 0 auto;display:grid;place-items:center;padding:0;border:1px solid var(--m-line);border-radius:50%;background:var(--m-control);color:var(--m-text);font-size:18px;cursor:pointer}
+  .layout{height:100dvh;display:block}
+  .catalog{display:none}
+  .reader{height:100%;min-height:0;background:var(--m-bg);color:var(--m-text)}
+  .mobile-picker{display:grid;grid-template-columns:42px minmax(0,1fr) 42px 42px 42px;gap:6px;padding:10px 12px;border-bottom:1px solid var(--m-line);background:var(--m-panel)}
+  .mobile-picker button,.mobile-picker select{height:42px;border:1px solid var(--m-line);border-radius:12px;background:var(--m-control);color:var(--m-text);font:inherit;font-weight:800}
+  .mobile-picker button{font-size:28px;line-height:1}
+  .mobile-picker select{min-width:0;padding:0 36px 0 14px;font-size:15px}
+  .mobile-picker #mobileLoop,.mobile-picker #mobileFollow{font-size:15px}
+  .mobile-picker svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .mobile-picker #mobileLoop[aria-pressed="true"],.mobile-picker #mobileFollow[aria-pressed="true"]{border-color:#ff674c;background:#ff674c;box-shadow:0 7px 18px rgba(255,103,76,.22)}
+  .lesson-head{display:none}
+  .player-card{margin:10px 12px 8px;padding:10px 12px;display:grid;grid-template-columns:48px minmax(0,1fr) 66px;align-items:center;gap:10px;border-color:var(--m-line);border-radius:16px;background:var(--m-panel)}
+  .play{width:48px;height:48px;background:#ff674c!important;color:#fff!important}
+  .progress-wrap{min-width:0;order:initial}
+  .progress-wrap input{accent-color:#ff674c}
+  .times{color:var(--m-muted)}
+  .player-card select{padding:8px;border-color:var(--m-line);background:var(--m-control);color:var(--m-text)}
+  .player-card #lineLoop{display:none}
+  .transcript-head{padding:7px 15px;border-bottom:1px solid var(--m-line)}
+  .transcript-head span{color:var(--m-muted)}
+  .transcript-head button{display:none}
+  .transcript{max-height:none;flex:1;padding:3px 10px 90px;overflow:auto;background:var(--m-bg)}
+  .line{grid-template-columns:44px minmax(0,1fr);gap:8px;padding:13px 10px;border-radius:11px;color:var(--m-text)}
+  .line:hover{background:var(--m-control)}
+  .line.active{background:var(--m-active);border-color:#80a843}
+  .line time{color:var(--m-muted)}
+  .line p{font-size:18px;line-height:1.55}
+  .line .speaker{color:var(--m-accent)}
+}
+
+@media(max-width:420px){
+  .level-btn{padding:7px 9px;font-size:12px}
+  .mobile-level{font-size:13px}
+  .mobile-picker{grid-template-columns:38px minmax(0,1fr) 38px 38px 38px;gap:4px;padding-inline:8px}
+  .mobile-picker button,.mobile-picker select{height:40px}
+  .mobile-picker select{padding-left:10px;font-size:14px}
+  .player-card{grid-template-columns:46px minmax(0,1fr) 62px;margin-inline:8px;padding-inline:10px;gap:8px}
+  .play{width:46px;height:46px}
+}

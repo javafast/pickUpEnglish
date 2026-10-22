@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="ELLLO A1/A2 英语逐句点读学习台">
+  <title>逐句点读 · 拾光英语</title>
+  <link rel="stylesheet" href="styles.css?v=3.1.0">
+  <link rel="stylesheet" href="mobile.css?v=3.1.0">
+  <style>.lesson-nav a{padding:9px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font-size:12px;font-weight:750;text-decoration:none}</style>
+</head>
+<body>
+  <main class="layout">
+    <aside class="catalog" id="catalog">
+      <div class="catalog-head">
+        <p class="eyebrow">拾光英语</p>
+        <div class="level-switch" id="levelSwitch">
+          <button type="button" class="level-btn" data-level="a1">A1</button>
+          <button type="button" class="level-btn" data-level="a2">A2</button>
+        </div>
+        <h1>逐句点读</h1>
+        <div class="top-actions"><span class="badge" id="levelBadge">ELLLO · A1</span><a href="/elllo/a1-video/" id="backLink">返回原学习台</a></div>
+        <div class="categories" id="categories"></div>
+        <input id="search" type="search" placeholder="搜索课程…" aria-label="搜索课程">
+      </div>
+      <div class="lesson-list" id="lessonList"></div>
+    </aside>
+    <section class="reader">
+      <div class="mobile-head">
+        <div class="level-switch mobile-level-switch" id="mobileLevelSwitch">
+          <button type="button" class="level-btn" data-level="a1">A1</button>
+          <button type="button" class="level-btn" data-level="a2">A2</button>
+        </div>
+        <select class="mobile-level" id="mobileCategory" aria-label="选择课程类型"></select>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换夜间模式" aria-pressed="false">☾</button>
+      </div>
+      <div class="mobile-picker">
+        <button id="mobilePrev" type="button" aria-label="上一课">‹</button>
+        <select id="mobileLesson" aria-label="选择课次"></select>
+        <button id="mobileNext" type="button" aria-label="下一课">›</button>
+        <button id="mobileLoop" type="button" aria-label="单句循环" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 2.8 20.2 6 17 9.2M4 11V9a3 3 0 0 1 3-3h13M7 21.2 3.8 18 7 14.8M20 13v2a3 3 0 0 1-3 3H4"/></svg></button>
+        <button id="mobileFollow" type="button" aria-label="自动跟随" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h10M5 12h14M5 18h8"/><circle cx="18" cy="18" r="3"/></svg></button>
+      </div>
+      <div class="lesson-head">
+        <div><small id="lessonMeta">准备课程</small><h2 id="lessonTitle">逐句点读</h2></div>
+        <div class="lesson-nav"><a id="sourceLink" href="#" target="_blank" rel="noopener">ELLLO 原课 ↗</a><button id="prevLesson">← 上一课</button><button id="nextLesson">下一课 →</button></div>
+      </div>
+      <div class="player-card">
+        <button class="play" id="playButton" type="button" aria-label="播放">▶</button>
+        <div class="progress-wrap"><input id="progress" type="range" min="0" max="1000" value="0"><div class="times"><span id="currentTime">00:00</span><span id="duration">00:00</span></div></div>
+        <select id="rate" aria-label="播放速度"><option value="0.75">0.75×</option><option value="1" selected>1.0×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select>
+        <button id="lineLoop" type="button" aria-pressed="false">单句循环：关</button>
+      </div>
+      <audio id="audio" preload="metadata" playsinline></audio>
+      <div class="transcript-head"><div><strong>英文原文</strong><span>点击任意句子开始点读</span></div><button id="followButton" type="button" aria-pressed="true">自动跟随：开</button></div>
+      <div class="transcript" id="transcript"><p class="empty">正在加载课程数据…</p></div>
+    </section>
+  </main>
+  <script src="app.js?v=3.1.0"></script>
+</body>
+</html>

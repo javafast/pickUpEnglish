@@ -205,6 +205,17 @@ cython_debug/
 # Temporary file for partial code execution
 tempCodeRunnerFile.py
 
+# pickUpEnglish generated/runtime files
+media/
+.cache/
+work/
+outputs/
+*.mp3
+*.lrc
+*.zip
+*.log
+.DS_Store
+
 # Ruff stuff:
 .ruff_cache/
 

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="精选英语听力、口语、发音与课本精读资源。">
+  <title>拾光导航</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="aurora aurora-one"></div><div class="aurora aurora-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="拾光导航首页"><span>拾</span>拾光导航</a>
+    <nav aria-label="页面导航"><a href="#sites">精选站点</a><a href="#about">关于</a></nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="切换明暗主题">◐</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">YOUR DIGITAL STARTING POINT</p>
+      <h1>每天一点，说出<br><em>更好的英语</em></h1>
+      <p class="intro">精选听力、口语、发音与精读资源，把输入变成自然表达。</p>
+      <form class="search-box" id="webSearch" role="search">
+        <select id="searchEngine" aria-label="搜索引擎"><option value="https://www.google.com/search?q=">Google</option><option value="https://www.baidu.com/s?wd=">百度</option><option value="https://www.bing.com/search?q=">Bing</option></select>
+        <input id="searchInput" type="search" placeholder="搜索整个互联网…" autocomplete="off" aria-label="搜索关键词">
+        <button type="submit">搜索 <span>↗</span></button>
+      </form>
+      <div class="quick-links"><span>快捷访问</span><a href="https://youglish.com/" target="_blank">YouGlish</a><a href="https://www.talkenglish.com/" target="_blank">TalkEnglish</a><a href="https://nce.ichochy.com" target="_blank">新概念英语</a></div>
+    </section>
+
+    <section class="directory" id="sites">
+      <div class="section-head"><div><p class="eyebrow">ENGLISH LEARNING PATH</p><h2>选择今天的学习方式</h2></div><label class="filter-search"><span>⌕</span><input id="siteSearch" type="search" placeholder="筛选资源…" aria-label="筛选资源"></label></div>
+      <div class="tabs" id="tabs" role="tablist"></div>
+      <div class="site-grid" id="siteGrid"></div>
+      <p class="empty" id="empty">没有找到匹配的站点，换个关键词试试。</p>
+    </section>
+
+    <section class="manifesto" id="about">
+      <span class="quote">“</span>
+      <p>听懂真实表达，练好自然发音，<br>让英语成为每天都能开口的小事。</p>
+      <div class="rule"></div><small>拾光导航 · 为专注而生</small>
+    </section>
+  </main>
+  <footer><a class="brand mini" href="#top"><span>拾</span>拾光导航</a><p>把好用的英语资源，整理成简单的入口。</p><span>© 2026 SHIGUANG</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>

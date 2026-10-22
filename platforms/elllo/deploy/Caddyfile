@@ -1,0 +1,16 @@
+elllo.191929.xyz {
+    encode zstd gzip
+
+    redir /a1 /?level=a1 302
+    redir /a1/* /?level=a1 302
+    redir /a2 /?level=a2 302
+    redir /a2/* /?level=a2 302
+
+    handle_path /books/* {
+        root * /var/www/elllo191929-media
+        file_server
+    }
+
+    root * /var/www/elllo191929
+    file_server
+}
